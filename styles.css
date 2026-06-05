@@ -38,8 +38,10 @@ nav a:hover{background:linear-gradient(90deg,rgba(255,255,255,0.06),rgba(255,255
 section{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));backdrop-filter:blur(6px);padding:1.25rem;border-radius:14px;border:1px solid var(--glass-border);box-shadow:0 8px 30px rgba(2,6,23,0.6)}
 section h2{font-size:1.4rem;margin-bottom:.5rem;color:#fff}
 
-#projetos ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;list-style:none;padding:0}
-#projetos li{background:linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:1rem;border-radius:10px;border:1px solid rgba(255,255,255,0.04)}
+#projetos ul, #produtos ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;list-style:none;padding:0;margin-top:1rem}
+#projetos li, #produtos li{background:linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:1rem;border-radius:10px;border:1px solid rgba(255,255,255,0.04);box-shadow:0 6px 18px rgba(2,6,23,0.45);transition:transform .18s}
+#projetos li:hover, #produtos li:hover{transform:translateY(-6px)}
+#produtos li strong{display:block;color:var(--accent);margin-bottom:.45rem;text-transform:capitalize}
 
 a[href^="mailto"]{display:inline-block;margin-top:.5rem;padding:.6rem 1rem;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--accent2));color:#061321;font-weight:600;text-decoration:none;box-shadow:0 8px 30px rgba(0,0,0,0.4);transition:transform .18s}
 a[href^="mailto"]:hover{transform:translateY(-4px)}
@@ -53,3 +55,24 @@ footer{margin-top:0;padding:1rem;border-radius:0 0 14px 14px;border:1px solid rg
 @media (min-width:768px){body{padding:3rem} h1{font-size:2.8rem} section{padding:2rem}}
 
 @keyframes hue{0%{filter:hue-rotate(0deg)}50%{filter:hue-rotate(45deg)}100%{filter:hue-rotate(0deg)}}
+
+.produtos-cta{
+  font-size:1.8rem;
+  color:transparent;
+  background:linear-gradient(90deg,var(--accent2),var(--accent));
+  -webkit-background-clip:text;
+  background-clip:text;
+  margin-top:1.25rem;
+  text-align:center;
+  font-weight:800;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  text-shadow:0 6px 30px rgba(0,0,0,0.6);
+  animation:glow 2.5s ease-in-out infinite alternate;
+}
+
+@media (min-width:768px){
+  .produtos-cta{font-size:2.6rem}
+}
+
+@keyframes glow{from{text-shadow:0 6px 18px rgba(255,110,199,0.12),0 0 24px rgba(0,224,255,0.06)}to{text-shadow:0 10px 40px rgba(255,110,199,0.22),0 0 48px rgba(0,224,255,0.12)}}
