@@ -83,4 +83,21 @@
     setTimeout(()=>{ a.style.opacity='1'; a.style.transform='translateY(0)'; }, 180 + i*80);
   });
 
+  // WhatsApp form handler
+  (function(){
+    const waNumber = '5511989757581'; // +55 11 98975-7581
+    const waForm = document.getElementById('whatsapp-form');
+    if(waForm){
+      waForm.addEventListener('submit', function(e){
+        e.preventDefault();
+        const name = document.getElementById('whatsapp-name')?.value.trim() || '';
+        const msg = document.getElementById('whatsapp-message')?.value.trim() || '';
+        if(!msg) return;
+        const text = (name ? (name + ' - ') : '') + msg;
+        const url = 'https://wa.me/' + waNumber + '?text=' + encodeURIComponent(text);
+        window.open(url, '_blank');
+      });
+    }
+  })();
+
 })();

@@ -76,3 +76,20 @@ footer{margin-top:0;padding:1rem;border-radius:0 0 14px 14px;border:1px solid rg
 }
 
 @keyframes glow{from{text-shadow:0 6px 18px rgba(255,110,199,0.12),0 0 24px rgba(0,224,255,0.06)}to{text-shadow:0 10px 40px rgba(255,110,199,0.22),0 0 48px rgba(0,224,255,0.12)}}
+
+/* WhatsApp contact area */
+.whatsapp-section{margin-top:1rem;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));backdrop-filter:blur(6px);padding:1.25rem;border-radius:0 0 14px 14px;border:1px solid var(--glass-border);box-shadow:0 8px 30px rgba(2,6,23,0.6);text-align:center}
+.whatsapp-section h2{font-size:1.25rem;margin-bottom:.5rem;color:#fff}
+.whatsapp-section p{color:rgba(230,238,248,0.85);margin-bottom:.75rem}
+#whatsapp-form{display:flex;flex-direction:column;gap:.6rem;max-width:760px;margin:0 auto}
+#whatsapp-form input,#whatsapp-form textarea{padding:.75rem;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:rgba(255,255,255,0.02);color:inherit;resize:vertical}
+#whatsapp-form textarea{min-height:90px}
+.whatsapp-actions{display:flex;gap:.6rem;justify-content:center;align-items:center;margin-top:.25rem}
+.whatsapp-btn{background:linear-gradient(90deg,var(--accent),var(--accent2));border:none;padding:.9rem 1.1rem;border-radius:999px;color:#061321;font-weight:700;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,0.35);transition:transform .14s;width:100%;max-width:320px}
+.whatsapp-btn:hover{transform:translateY(-4px)}
+.instagram-link{display:none}
+.instagram-block{margin-top:.8rem;text-align:center}
+.instagram-btn{display:inline-flex;align-items:center;gap:.6rem;padding:.7rem 1.1rem;border-radius:999px;background:linear-gradient(90deg,var(--accent2),var(--accent));color:#061321;font-weight:700;text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,0.35)}
+.btn-emoji{display:inline-block;font-size:1.15rem;line-height:1;transform:translateY(-1px)}
+
+@media (min-width:768px){#whatsapp-form{flex-direction:column}#whatsapp-form input{width:100%}#whatsapp-form textarea{width:100%}.whatsapp-btn{max-width:420px}}
