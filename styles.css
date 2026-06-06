@@ -85,6 +85,21 @@ footer{margin-top:0;padding:1rem;border-radius:0 0 14px 14px;border:1px solid rg
 
 @keyframes glow{from{text-shadow:0 6px 18px rgba(255,110,199,0.12),0 0 24px rgba(0,224,255,0.06)}to{text-shadow:0 10px 40px rgba(255,110,199,0.22),0 0 48px rgba(0,224,255,0.12)}}
 
+/* Project grid and cards */
+.project-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-top:1rem}
+.project-card{position:relative;border-radius:12px;overflow:hidden;min-height:200px;border:1px solid rgba(255,255,255,0.04);box-shadow:0 12px 40px rgba(2,6,23,0.6);cursor:pointer;transition:transform .18s,box-shadow .18s}
+.project-card:hover{transform:translateY(-8px)}
+.card-image{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.68) saturate(1.02);transform:scale(1.02);transition:transform .5s ease}
+.project-card:hover .card-image{transform:scale(1.06)}
+.card-overlay{position:relative;z-index:2;padding:1rem;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;height:100%}
+.card-overlay h3{font-size:1.1rem;margin-bottom:.35rem;background:linear-gradient(90deg,var(--accent2),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+.card-overlay p{color:rgba(230,238,248,0.9);font-size:.95rem}
+
+/* small label in front for when images are not present */
+.project-card:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.06),rgba(0,0,0,0.12));pointer-events:none}
+
+@media (max-width:520px){.card-overlay h3{font-size:1rem}.project-card{min-height:180px}}
+
 /* WhatsApp contact area */
 .whatsapp-section{margin-top:1rem;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));backdrop-filter:blur(6px);padding:1.25rem;border-radius:0 0 14px 14px;border:1px solid var(--glass-border);box-shadow:0 8px 30px rgba(2,6,23,0.6);text-align:center}
 .whatsapp-section h2{font-size:1.25rem;margin-bottom:.5rem;color:#fff}
