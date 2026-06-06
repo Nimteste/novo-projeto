@@ -33,9 +33,13 @@ nav ul{display:flex;gap:1rem;list-style:none}
 nav a{color:rgba(230,238,248,0.9);text-decoration:none;padding:.5rem 1rem;border-radius:8px;transition:all .25s}
 nav a:hover{background:linear-gradient(90deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02));transform:translateY(-3px);box-shadow:0 6px 20px rgba(0,0,0,0.4)}
 
-/* destaque para botão Sobre */
-nav a#btn-sobre{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#061321;padding:.5rem 1rem;border-radius:10px;font-weight:700;box-shadow:0 8px 28px rgba(255,110,199,0.08);border:1px solid rgba(255,255,255,0.06)}
-nav a#btn-sobre:hover{transform:translateY(-4px);filter:brightness(1.05)}
+/* nav button pill (shared style) */
+nav a.nav-btn{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#061321;padding:.5rem 1rem;border-radius:10px;font-weight:700;box-shadow:0 8px 28px rgba(255,110,199,0.08);border:1px solid rgba(255,255,255,0.06);display:inline-block}
+nav a.nav-btn:hover{transform:translateY(-4px);filter:brightness(1.05)}
+
+/* destaque para botão Sobre (kept for specificity if needed) */
+nav a#btn-sobre{border-radius:10px}
+nav a#btn-sobre:hover{transform:translateY(-4px)}
 
 /* botão voltar da página sobre */
 .back-btn{background:linear-gradient(90deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02));padding:.45rem .9rem;border-radius:8px;color:var(--accent2);text-decoration:none;border:1px solid rgba(255,255,255,0.04);font-weight:700}
