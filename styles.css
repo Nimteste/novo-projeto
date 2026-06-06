@@ -33,6 +33,14 @@ nav ul{display:flex;gap:1rem;list-style:none}
 nav a{color:rgba(230,238,248,0.9);text-decoration:none;padding:.5rem 1rem;border-radius:8px;transition:all .25s}
 nav a:hover{background:linear-gradient(90deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02));transform:translateY(-3px);box-shadow:0 6px 20px rgba(0,0,0,0.4)}
 
+/* destaque para botão Sobre */
+nav a#btn-sobre{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#061321;padding:.5rem 1rem;border-radius:10px;font-weight:700;box-shadow:0 8px 28px rgba(255,110,199,0.08);border:1px solid rgba(255,255,255,0.06)}
+nav a#btn-sobre:hover{transform:translateY(-4px);filter:brightness(1.05)}
+
+/* botão voltar da página sobre */
+.back-btn{background:linear-gradient(90deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02));padding:.45rem .9rem;border-radius:8px;color:var(--accent2);text-decoration:none;border:1px solid rgba(255,255,255,0.04);font-weight:700}
+.back-btn:hover{transform:translateY(-3px);filter:brightness(1.06)}
+
 #contato{margin-top:1.25rem;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));backdrop-filter:blur(6px);padding:1.5rem;border-radius:14px 14px 0 0;border:1px solid var(--glass-border);border-bottom:none;box-shadow:0 8px 30px rgba(2,6,23,0.6);text-align:center;display:flex;flex-direction:column;align-items:center;gap:.5rem}
 
 section{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));backdrop-filter:blur(6px);padding:1.25rem;border-radius:14px;border:1px solid var(--glass-border);box-shadow:0 8px 30px rgba(2,6,23,0.6)}
