@@ -55,8 +55,8 @@ section h2{font-size:1.4rem;margin-bottom:.5rem;color:#fff}
 #projetos li:hover, #produtos li:hover{transform:translateY(-6px)}
 #produtos li strong{display:block;color:var(--accent);margin-bottom:.45rem;text-transform:capitalize}
 
-a[href^="mailto"]{display:inline-block;margin-top:.5rem;padding:.6rem 1rem;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--accent2));color:#061321;font-weight:600;text-decoration:none;box-shadow:0 8px 30px rgba(0,0,0,0.4);transition:transform .18s}
-a[href^="mailto"]:hover{transform:translateY(-4px)}
+a[href^="mailto"], .email-btn{display:inline-block;margin-top:.5rem;padding:.6rem 1rem;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--accent2));color:#061321;font-weight:600;text-decoration:none;box-shadow:0 8px 30px rgba(0,0,0,0.4);transition:transform .18s}
+a[href^="mailto"]:hover, .email-btn:hover{transform:translateY(-4px)}
 
 .contact-cta{display:flex;justify-content:center;margin-top:.75rem}
 
